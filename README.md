@@ -105,6 +105,100 @@ Worker A
 - Continuous Task Execution
 - Improved System Reliability
 
+## ⚙️ Configuration
+
+Before starting the system, ensure that all network configurations are properly set.
+
+### Backend Configuration
+
+Update the `config.json` file with the appropriate IP addresses and ports for your environment.
+
+```json
+{
+    "Master": {"first": "127.0.0.1", "second": 3333},
+    "Workers": [
+        {"first": "127.0.0.1", "second": 4001},
+        {"first": "127.0.0.1", "second": 4002},
+        {"first": "127.0.0.1", "second": 4003}
+    ],
+    "RNG": {"first": "127.0.0.1", "second": 5000},
+    "Reducer": {"first": "127.0.0.1", "second": 6000},
+    "Secret": "your-secret-key",
+    "bufferSize": 100000
+}
+```
+
+#### Configuration Parameters
+
+| Component | Description |
+|------------|------------|
+| Master | Master node IP and port |
+| Workers | List of available worker nodes |
+| RNG | Random Number Generator service |
+| Reducer | Reducer service |
+| Secret | Shared secret used for secure communication |
+| bufferSize | Socket communication buffer size |
+
+For distributed deployment across multiple machines, replace the localhost (`127.0.0.1`) addresses with the actual IP address of each host.
+
+---
+
+### Frontend Configuration
+
+The frontend must be configured to communicate with the Master node.
+
+Navigate to:
+
+```text
+src/main/java/com/example/taketwo_partb/network/InternalConfig.java
+```
+
+and update the backend IP address:
+
+```java
+public class InternalConfig {
+
+    private static final String BackendIp = "192.168.X.X";
+    private static final int port = 3333;
+
+    public static String getBackendIp() {
+        return BackendIp;
+    }
+
+    public static int getPort() {
+        return port;
+    }
+}
+```
+
+#### Important
+
+- `BackendIp` must point to the machine running the Master node.
+- `port` must match the Master port defined in `config.json`.
+- When running all components locally, `127.0.0.1` can be used.
+- When deploying across multiple PCs, use the actual LAN or public IP address of the Master machine.
+
+---
+
+### Example Distributed Deployment
+
+| Component | IP Address | Port |
+|------------|------------|--------|
+| Master | 192.168.1.10 | 3333 |
+| Worker 1 | 192.168.1.11 | 4001 |
+| Worker 2 | 192.168.1.12 | 4002 |
+| Worker 3 | 192.168.1.13 | 4003 |
+| RNG | 192.168.1.14 | 5000 |
+| Reducer | 192.168.1.15 | 6000 |
+
+The frontend should then use:
+
+```java
+private static final String BackendIp = "192.168.1.10";
+```
+
+to connect to the Master node.
+
 ## Running the System
 
 The system consists of several distributed components that must be started in the following order:
@@ -188,20 +282,16 @@ Players connect to the distributed casino system and interact with the available
 
 ## Demonstration
 
-### Distributed Task Execution
-
-> Add screenshot showing multiple workers processing tasks simultaneously.
-
-![Distributed Execution](images/distributed-execution.png)
-
 ### Task Distribution
 
-> Add screenshot showing the Master node assigning tasks to workers.
+> Showing the Master node assigning tasks to workers.
 
-![Task Distribution](images/task-distribution.png)
+<img width="1820" height="858" alt="image" src="https://github.com/user-attachments/assets/48a7cadc-15c3-4e8b-9def-84cf1f677e6c" />
+
 
 ### Application Interface
 
-> Add screenshot of the casino application's user interface.
+> Casino application's user interface.
 
-![Casino UI](images/casino-ui.png)
+<img width="366" height="861" alt="image" src="https://github.com/user-attachments/assets/040daa54-1991-4c18-b76e-a6083db9d325" />
+
