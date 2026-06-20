@@ -1,0 +1,12 @@
+{
+    "Master": {"first": "127.0.0.1", "second": 3333},
+    "Workers": [
+        {"first": "127.0.0.1", "second": 4001},
+        {"first": "127.0.0.1", "second": 4002},
+        {"first": "127.0.0.1", "second": 4003}
+    ],
+    "RNG": {"first": "127.0.0.1", "second": 5000},
+    "Reducer": {"first": "127.0.0.1", "second": 6000},
+    "Secret": "sddsdssdgfsdgt3325235",
+    "bufferSize": 100000
+}

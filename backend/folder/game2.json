@@ -1,0 +1,11 @@
+{
+  "GameName": "Lucky Wheel",
+  "ProviderName": "CasinoMaster",
+  "Stars": 5,
+  "NoOfVotes": 250,
+  "GameLogo": "images/dragon_fortune.png",
+  "MinBet": 0.1,
+  "MaxBet": 10,
+  "RiskLevel": "medium",
+  "HashKey": "secret_dragon"
+}

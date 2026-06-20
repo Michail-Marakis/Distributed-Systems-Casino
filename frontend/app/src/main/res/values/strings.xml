@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">TakeTwo Casino</string>
+
+
+    <string name="splash_title">TAKETWO</string>
+    <string name="splash_subtitle">CASINO</string>
+    <string name="splash_enter_btn">CHECK BALANCE &amp; ENTER</string>
+    <string name="splash_play_btn">ENTER CASINO</string>
+    <string name="splash_balance_label">CURRENT BALANCE</string>
+    <string name="splash_welcome">Welcome Back</string>
+    <string name="splash_enter_id">Enter your Player ID</string>
+
+
+    <string name="lobby_title">Game Lobby</string>
+    <string name="btn_search">SEARCH GAMES</string>
+    <string name="btn_add_balance">ADD BALANCE</string>
+    <string name="status_ready">Ready</string>
+
+
+    <string name="game_dice">🎲 Dice Game</string>
+    <string name="game_slots">🎰 Lucky Slots</string>
+    <string name="game_wheel">🎡 Lucky Wheel</string>
+    <string name="game_mines">💣 Mines</string>
+    <string name="game_coinflip">🪙 Coin Flip</string>
+
+
+    <string name="btn_roll">🎲 ROLL DICE</string>
+    <string name="btn_spin">🎰 SPIN</string>
+    <string name="btn_flip">🪙 FLIP COIN</string>
+    <string name="btn_play_mines">💣 PLAY MINES</string>
+    <string name="label_result">RESULT</string>
+    <string name="label_balance">Balance</string>
+    <string name="label_winnings">Winnings</string>
+    <string name="label_multiplier">Multiplier</string>
+    <string name="label_jackpot">Jackpot</string>
+    <string name="label_profit">Profit</string>
+    <string name="btn_back_description">Go back</string>
+</resources>

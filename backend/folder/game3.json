@@ -1,0 +1,11 @@
+{
+  "GameName": "Dice Game",
+  "ProviderName": "GoldSpin",
+  "Stars": 3,
+  "NoOfVotes": 80,
+  "GameLogo": "images/mega_jackpot.png",
+  "MinBet": 0.1,
+  "MaxBet": 10,
+  "RiskLevel": "high",
+  "HashKey": "secret_mega"
+}

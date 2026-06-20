@@ -1,0 +1,11 @@
+{
+  "GameName": "Coin Flip",
+  "ProviderName": "GoldSpin",
+  "Stars": 3,
+  "NoOfVotes": 80,
+  "GameLogo": "images/mines.png",
+  "MinBet": 0.1,
+  "MaxBet": 10,
+  "RiskLevel": "medium",
+  "HashKey": "secret_mega"
+}
