@@ -288,6 +288,7 @@ Players connect to the distributed casino system and interact with the available
 
 <img width="1820" height="858" alt="image" src="https://github.com/user-attachments/assets/48a7cadc-15c3-4e8b-9def-84cf1f677e6c" />
 
+*Worker-2 was intentionally shut down during execution. The Master detected the failure and automatically redirected requests to the backup worker, demonstrating Active Replication and fault-tolerant execution.*
 
 ### Application Interface
 
