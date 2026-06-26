@@ -105,7 +105,7 @@ Worker A
 - Continuous Task Execution
 - Improved System Reliability
 
-## ⚙️ Configuration
+## Configuration
 
 Before starting the system, ensure that all network configurations are properly set.
 
