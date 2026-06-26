@@ -199,6 +199,8 @@ private static final String BackendIp = "192.168.1.10";
 
 to connect to the Master node.
 
+---
+
 ## Running the System
 
 The system consists of several distributed components that must be started in the following order:
@@ -211,8 +213,6 @@ java RNG
 
 Provides the random values required by the casino games.
 
----
-
 ### 2. Start the Reducer
 
 ```bash
@@ -220,8 +220,6 @@ java Reducer
 ```
 
 Responsible for aggregating intermediate results produced by worker nodes during the Reduce phase.
-
----
 
 ### 3. Start Worker Nodes
 
@@ -241,8 +239,6 @@ java Worker
 
 Workers may run on separate machines to enable distributed execution.
 
----
-
 ### 4. Start the Master Node
 
 ```bash
@@ -258,8 +254,6 @@ The Master coordinates the system by:
 - Handling fault recovery
 - Aggregating results
 
----
-
 ### 5. Start the Manager Console
 
 ```bash
@@ -267,8 +261,6 @@ java ManagerConsole
 ```
 
 The Manager Console allows administrators to monitor the state of the distributed system and manage casino operations.
-
----
 
 ### 6. Start the Player Application
 
